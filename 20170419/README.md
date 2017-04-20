@@ -2,7 +2,7 @@
 기본적인 패턴 이해
 
 ## 객체
-```bash
+```javascript
 	var first_object = {
 		name : "tae woong"
 		, result : function() {
@@ -13,7 +13,7 @@
 ```
 
 ## 프로토타입
-```bash
+```javascript
 	var example = function(){
 		this.name = "tae woong";
 		this.calc = function(param) {
@@ -30,7 +30,7 @@
 
 ## 상속
 상속이란 개념은 없고 프로토타입 결합 ! 
-```bash
+```javascript
 	function clone(source, destination) {
 		for(var attr in source.prototype) {
 			destination.prototype[attr] = source.prototype[attr];
@@ -39,7 +39,7 @@
 ```
 
 ## 모듈
-```
+```javascript
 	westeros.module = example;
 
 	var module = new westeros.module();
