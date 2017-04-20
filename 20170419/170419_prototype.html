@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<title>JavaScript</title>
+</head>
+
+<script type="text/javascript">
+
+	var example = function(){
+		this.name = "tae woong";
+		this.calc = function(param) {
+			//계산 혹은 로직
+			return param + 5;
+		};
+	}
+
+	example.prototype.result = function() {
+			console.log(this.name + " : " + this.calc(3));
+		};
+	var instance = new example();
+	instance.result();
+
+	//Object.create
+	/*
+		writable
+		configurable
+		enumerable
+		value
+	*/
+
+	var example1 = function(){
+		this.name = "tae woong";
+	}
+
+	example1.prototype.result = function() {
+			console.log(this.name);
+		};
+	var instance1 = Object.create(example1.prototype, {name : {value : "not change name", writable : false}});
+	instance1.name = "change name";
+	instance1.result(); // not change name
+
+
+</script>
+
+<body>
+
+	javascript
+
+</body>
+
+</html>
